@@ -1,0 +1,12 @@
+- name: PubTeam
+  class: Package
+  Nodes:
+    - name: PNode
+      class: Node
+      ports:
+        - name: P1
+          class: PublishPort
+          datatype: Datatype1
+  Datatypes:
+    - name: Datatype1
+      class: UserDefinedFloat

@@ -1,0 +1,10 @@
+- name: SubTeam
+  class: Package
+  Nodes:
+    - name: SNode
+      class: Node
+      ports:
+        - name: S1
+          class: PublishPort
+          datatype: PubTeam/Datatype1
+          publisher: PubTeam/PNode/P1
