@@ -8,3 +8,8 @@
           class: PublishPort
           datatype: PubTeam/Datatype1
           publisher: PubTeam/PNode/P1
+        - name: S3
+          class: PublishPort
+          datatype: PubTeam/Datatype2
+          publisher: PubTeam/PNode/P2
+

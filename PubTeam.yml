@@ -7,6 +7,11 @@
         - name: P1
           class: PublishPort
           datatype: Datatype1
+        - name: P2
+          class: PublishPort
+          datatype: Datatype2
   Datatypes:
     - name: Datatype1
+      class: UserDefinedFloat
+    - name: Datatype2
       class: UserDefinedFloat
