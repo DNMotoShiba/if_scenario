@@ -16,4 +16,8 @@
       _datatypes:
         - SubTeam/SNode1/S1
         - SubTeam2/SNode2/S2
+    - name: Datatype2
+      class: UserDefinedFloat
+      _datatypes:
+
 
