@@ -5,6 +5,6 @@
       class: Node
       ports:
         - name: S1
-          class: PublishPort
+          class: SubscribPort
           datatype: PubTeam/Datatype1
           publisher: PubTeam/PNode/P1
