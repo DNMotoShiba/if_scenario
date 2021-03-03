@@ -7,6 +7,13 @@
         - name: P1
           class: PublishPort
           datatype: Datatype1
+          _subscriber:
+            - SubTeam/SNode1/S1
+            - SubTeam2/SNode2/S2
   Datatypes:
     - name: Datatype1
       class: UserDefinedFloat
+      _datatypes:
+        - SubTeam/SNode1/S1
+        - SubTeam2/SNode2/S2
+
