@@ -19,5 +19,8 @@
     - name: Datatype2
       class: UserDefinedFloat
       _datatypes:
+    - name: Datatype3
+      class: UserDefinedFloat
+      _datatypes:
 
 
