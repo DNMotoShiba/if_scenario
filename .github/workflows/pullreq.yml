@@ -21,7 +21,7 @@ jobs:
       - name: Make stakeholder list
         run: |
           echo -n -e 'addReviewers: true \naddAssignees: author \nreviewers: \n  - bleach31 \nnumberOfReviewers: 0 \n' > .github/reviewers.yml
-          cat reviewers.yml
+          cat .github/reviewers.yml
           ls -la
 
       - name: check another step
