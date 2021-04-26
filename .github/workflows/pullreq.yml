@@ -22,9 +22,10 @@ jobs:
         run: |
           echo -n -e 'addReviewers: true \naddAssignees: false \nreviewers: \n  - bleach31 \nnumberOfReviewers: 0 \n' > reviewers.yml
           cat reviewers.yml
+          ls -la
 
       - name: check another step
-        run: cat reviewers.yml
+        run: pwd 
 
       # レビュアーの割り当て
       # https://github.com/marketplace/actions/auto-assign-action
