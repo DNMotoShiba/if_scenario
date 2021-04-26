@@ -19,10 +19,9 @@ jobs:
 
       # 関係者の取得（ND CLIエクステンションを実行し、reviewer.yamlを生成する)
       - name: Make stakeholder list
-        run: echo -n -e 'test: true \naaa \n -bbb'> reviewers.yml
-
-      - name: check reviewers
-        run: cat reviewers.yml
+        run: |
+          echo -n -e 'addReviewers: true \naddAssignees: false \nreviewers: \n  - bleach31 \nnumberOfReviewers: 0 \n' > reviewers.yml
+          cat reviewers.yml
 
       # レビュアーの割り当て
       # https://github.com/marketplace/actions/auto-assign-action
