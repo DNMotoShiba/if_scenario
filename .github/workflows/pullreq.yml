@@ -27,5 +27,6 @@ jobs:
       # https://github.com/marketplace/actions/auto-assign-action
       - uses: kentaro-m/auto-assign-action@v1.1.2
         with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: "reviewers.yml" 
 
