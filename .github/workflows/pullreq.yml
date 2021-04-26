@@ -23,10 +23,12 @@ jobs:
           echo -n -e 'addReviewers: true \naddAssignees: false \nreviewers: \n  - bleach31 \nnumberOfReviewers: 0 \n' > reviewers.yml
           cat reviewers.yml
 
+      - name: check another step
+        run: cat reviewers.yml
+
       # レビュアーの割り当て
       # https://github.com/marketplace/actions/auto-assign-action
       - uses: kentaro-m/auto-assign-action@v1.1.2
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: "reviewers.yml" 
 
