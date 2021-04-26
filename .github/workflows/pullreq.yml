@@ -20,10 +20,6 @@ jobs:
       # 関係者の取得（ND CLIエクステンションを実行し、環境変数をセットする)
       - name: Make stakeholder list
         run: echo "reviewers=bleach31" >> $GITHUB_ENV
-          ls -la
-
-      - name: check another step
-        run: pwd 
 
       #https://github.com/marketplace/actions/review-assign-action
       - uses: hkusu/review-assign-action@v1
