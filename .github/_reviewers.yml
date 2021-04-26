@@ -1,5 +1,6 @@
 addReviewers: true
 addAssignees: false
 reviewers:
-　 - bleach31
-numberOfReviewers: 0 
+  - bleach31
+numberOfReviewers: 0
+
