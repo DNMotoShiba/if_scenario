@@ -29,7 +29,11 @@ jobs:
 
       # レビュアーの割り当て
       # https://github.com/marketplace/actions/auto-assign-action
-      - uses: kentaro-m/auto-assign-action@v1.1.2
-        with:
-          configuration-path: ".github/hoge.yml" 
+      #- uses: kentaro-m/auto-assign-action@v1.1.2
+      #  with:
+      #    configuration-path: ".github/reviewers.yml" 
 
+      - uses: hkusu/review-assign-action@v1
+        with:
+          assignees: ${{ github.actor }} # assign pull request author
+          reviewers: bleach31  # if draft, assigned when draft is released
