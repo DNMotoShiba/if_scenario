@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: set_pull_request_reviwer
+name: auto-assign
 
 on:
   pull_request:
@@ -11,16 +11,22 @@ on:
 
 
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  add-reviews:
     runs-on: ubuntu-18.04
     steps: 
+      # リポジトリのチェックアウト
       - uses: actions/checkout@v2
-      - name: Run a one-line script
-      
-        run: echo Hello, world!
 
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      # 関係者の取得（ND CLIエクステンションを実行し、reviewer.yamlを生成する)
+      - name: Make stakeholder list
+        run: echo 'addReviewers: true \n addAssignees: false \n reviewers: \n - bleach31 \n numberOfReviewers: 0 '> reviewers.yml
+
+      - name: check reviewers
+        run: cat reviewers.yml
+
+      # レビュアーの割り当て
+      # https://github.com/marketplace/actions/auto-assign-action
+      - uses: kentaro-m/auto-assign-action@v1.1.2
+        with:
+          configuration-path: "reviewers.yml" 
+
