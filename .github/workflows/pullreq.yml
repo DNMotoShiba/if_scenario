@@ -31,5 +31,5 @@ jobs:
       # https://github.com/marketplace/actions/auto-assign-action
       - uses: kentaro-m/auto-assign-action@v1.1.2
         with:
-          configuration-path: ".github/reviewers.yml" 
+          configuration-path: ".github/_reviewers.yml" 
 
