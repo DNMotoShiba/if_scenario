@@ -19,7 +19,7 @@ jobs:
 
       # 関係者の取得（ND CLIエクステンションを実行し、reviewer.yamlを生成する)
       - name: Make stakeholder list
-        run: echo 'test \n aaa'> reviewers.yml
+        run: echo -n -e 'test \n aaa'> reviewers.yml
 
       - name: check reviewers
         run: cat reviewers.yml
